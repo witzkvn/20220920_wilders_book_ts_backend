@@ -1,0 +1,36 @@
+# create a new wilder
+POST http://localhost:3000/api/wilders
+Content-Type: application/json
+
+{
+    "name": "Harmony3",
+    "description" : "Hello from the stars !",
+    "city": "Starpolis"
+}
+
+###
+# get all wilders
+GET http://localhost:3000/api/wilders
+
+###
+
+# http://localhost:3000/api/wilders/:wilderid
+PATCH http://localhost:3000/api/wilders/2
+Content-Type: application/json
+
+{
+    "name": "Princess Peach"
+}
+
+###
+PATCH http://localhost:3000/api/wilders/6
+Content-Type: application/json
+
+{
+    "description": "Test description"
+}
+
+###
+# http://localhost:3000/api/wilders/:wilderid
+DELETE http://localhost:3000/api/wilders/4
+

@@ -1,0 +1,13 @@
+# http://localhost:3000/api/grades
+POST http://localhost:3000/api/grades
+Content-Type: application/json
+
+{
+    "wilderId": 2,
+    "skillId": 2,
+    "grades": 10
+}
+
+###
+# http://localhost:3000/api/grades/:wilderid
+GET http://localhost:3000/api/grades/2
