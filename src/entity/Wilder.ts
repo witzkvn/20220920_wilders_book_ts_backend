@@ -1,10 +1,4 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  OneToMany,
-  JoinTable,
-} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { IWilder } from "../interfaces/IWilder";
 import { Grade } from "./Grade";
 
@@ -24,8 +18,6 @@ export class Wilder implements IWilder {
 
   @OneToMany(() => Grade, (grade) => grade.wilder, {
     cascade: true,
-    eager: true,
   })
-  @JoinTable()
   grades: Grade[];
 }

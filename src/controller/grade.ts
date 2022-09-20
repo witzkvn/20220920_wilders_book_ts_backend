@@ -36,7 +36,11 @@ export const gradeController: IController = {
   },
   getAll: async (req, res) => {
     try {
-      const allGrades = await dataSource.getRepository(Grade).find();
+      const allGrades = await dataSource.getRepository(Grade).find({
+        relations: {
+          skill: true,
+        },
+      });
       res.status(200).send({ message: "Success", grades: allGrades });
     } catch (error) {
       console.log(error);

@@ -47,7 +47,13 @@ const wilderController: IController = {
   },
   getAll: async (req, res) => {
     try {
-      const allWilders = await dataSource.getRepository(Wilder).find();
+      const allWilders = await dataSource.getRepository(Wilder).find({
+        relations: {
+          grades: {
+            skill: true,
+          },
+        },
+      });
 
       const formattedResponse = allWilders.map((el) => {
         const elSkills = el.grades.map((grade) => {

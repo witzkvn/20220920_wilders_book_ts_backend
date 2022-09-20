@@ -1,10 +1,4 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  JoinTable,
-} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { Wilder } from "./Wilder";
 import { Skill } from "./Skill";
 
@@ -20,8 +14,7 @@ export class Grade {
   wilder: Wilder;
 
   @ManyToOne(() => Skill, (skill) => skill.grades, {
-    eager: true,
+    onDelete: "CASCADE",
   })
-  @JoinTable()
   skill: Skill;
 }
