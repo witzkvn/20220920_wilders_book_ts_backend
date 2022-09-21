@@ -15,11 +15,11 @@ const wilderController: IController = {
       });
 
       let isNotFoundAndBreak = false;
-      if (typeof skills !== "undefined" && skills.length > 0) {
+      if (skills.length > 0) {
         for (const skill of req.body.skills) {
           const addRes = await createGradeForWilder(
             createdWilder.id,
-            skill.skillId,
+            skill.id,
             skill.grades
           );
 
