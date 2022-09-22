@@ -1,0 +1,24 @@
+# create a new skill
+POST http://localhost:3000/api/skills
+Content-Type: application/json
+
+{
+    "name": "Javascript"
+}
+
+###
+# get all skills
+GET http://localhost:3000/api/skills
+
+###
+# http://localhost:3000/api/skills/:skillid
+PATCH http://localhost:3000/api/skills/4
+Content-Type: application/json
+
+{
+    "name": "C"
+}
+
+###
+# http://localhost:3000/api/skills/:skillid
+DELETE http://localhost:3000/api/skills/6
