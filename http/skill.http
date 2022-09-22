@@ -21,4 +21,4 @@ Content-Type: application/json
 
 ###
 # http://localhost:3000/api/skills/:skillid
-DELETE http://localhost:3000/api/skills/2
+DELETE http://localhost:3000/api/skills/6
