@@ -15,7 +15,7 @@ GET http://localhost:3000/api/wilders
 ###
 
 # http://localhost:3000/api/wilders/:wilderid
-PATCH http://localhost:3000/api/wilders/2
+PATCH http://localhost:3000/api/wilders/8
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/api/wilders/6
+PATCH http://localhost:3000/api/wilders/5
 Content-Type: application/json
 
 {
