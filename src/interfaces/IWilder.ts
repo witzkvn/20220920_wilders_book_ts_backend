@@ -3,4 +3,5 @@ export interface IWilder {
   city: string;
   name: string;
   description: string;
+  avatar?: string;
 }

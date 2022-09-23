@@ -10,12 +10,13 @@ import Skill from "../entity/Skill";
 const wilderController: IController = {
   create: async (req, res) => {
     try {
-      const { name, city, description, grades } = req.body;
+      const { name, city, description, grades, avatar } = req.body;
 
       const createdWilder = await dataSource.getRepository(Wilder).save({
         name,
         city,
         description,
+        avatar,
       });
 
       let isNotFoundAndBreak = false;
@@ -75,6 +76,7 @@ const wilderController: IController = {
           name: el.name,
           description: el.description,
           city: el.city,
+          avatar: el.avatar,
           grades: elGrades,
         };
       });
@@ -116,6 +118,7 @@ const wilderController: IController = {
           name: req.body.name,
           city: req.body.city,
           description: req.body.description,
+          avatar: req.body.avatar,
         }
       );
 
