@@ -16,6 +16,9 @@ export class Wilder implements IWilder {
   @Column()
   description: string;
 
+  @Column()
+  avatar?: string;
+
   @OneToMany(() => Grade, (grade) => grade.wilder, {
     cascade: true,
   })
